@@ -16,8 +16,15 @@
             <children>
             <HBox prefHeight="40.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="goToHomeButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" style="                                         -fx-background-color: #cfc9bf;                                         -fx-text-fill: #333333;                                         -fx-font-family: 'Segoe UI';                                         -fx-font-size: 12px;                                         -fx-background-radius: 8;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                                 " text="&lt;-    Home" />
-               </children>
+                  <Button fx:id="goToHomeButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0"  style="
+                      -fx-background-color: linear-gradient(to bottom, #ded9d1, #cfc9bf);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                          text="&lt;-    Home" /></children>
             </HBox>
                 <TreeView fx:id="sidebarTreeView" prefHeight="200.0" prefWidth="200.0"
                           style="
@@ -29,23 +36,76 @@
                 />
                 <HBox fx:id="bottombox" prefHeight="40.0" prefWidth="200.0">
                     <children>
-                        <Button fx:id="addTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                 -fx-background-color: #e8f4ff;        /* very light blue */                                 -fx-text-fill: #333333;               /* dark grey text */                                 -fx-font-family: 'Segoe UI';          /* modern font */                                 -fx-font-size: 12px;                                 -fx-background-radius: 8;             /* rounded corners */                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                             " text="Add Topic" />
-                        <Button fx:id="deleteTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                         -fx-background-color: #ffe8e8;        /* very light red */                                         -fx-text-fill: #333333;                                         -fx-font-family: 'Segoe UI';                                         -fx-font-size: 12px;                                         -fx-background-radius: 8;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                                 " text="Delete Topic" />
+                        <Button fx:id="addTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
+                      -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                                text="Add Topic" />
+                        <Button fx:id="deleteTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
+                      -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                                text="Delete Topic" />                    </children>
+                </HBox>
+                <HBox prefHeight="40.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="addSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
+                      -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                                text="Add Subject" />
+                        <Button fx:id="deleteSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
+                      -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                                text="Delete Subject" />
                     </children>
                 </HBox>
                 <HBox prefHeight="40.0" prefWidth="200.0">
                     <children>
-                        <Button fx:id="addSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                 -fx-background-color: #e8f4ff;        /* very light blue */                                 -fx-text-fill: #333333;               /* dark grey text */                                 -fx-font-family: 'Segoe UI';          /* modern font */                                 -fx-font-size: 12px;                                 -fx-background-radius: 8;             /* rounded corners */                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                             " text="Add Subject" />
-                        <Button fx:id="deleteSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                         -fx-background-color: #ffe8e8;        /* very light red */                                         -fx-text-fill: #333333;                                         -fx-font-family: 'Segoe UI';                                         -fx-font-size: 12px;                                         -fx-background-radius: 8;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                                 " text="Delete Subject" />
-                    </children>
+                        <Button fx:id="addFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
+                      -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                                text="Add Flashcard" />
+                        <Button fx:id="deleteFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
+                      -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);
+                      -fx-text-fill: #333333;
+                      -fx-font-family: 'Segoe UI';
+                      -fx-font-size: 12px;
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                    "
+                                text="Del Flashcard" />                    </children>
                 </HBox>
-                <HBox prefHeight="40.0" prefWidth="200.0">
-                    <children>
-                        <Button fx:id="addFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                 -fx-background-color: #e8f4ff;        /* very light blue */                                 -fx-text-fill: #333333;               /* dark grey text */                                 -fx-font-family: 'Segoe UI';          /* modern font */                                 -fx-font-size: 12px;                                 -fx-background-radius: 8;             /* rounded corners */                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                             " text="Add Flashcard" />
-                        <Button fx:id="deleteFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                         -fx-background-color: #ffe8e8;        /* very light red */                                         -fx-text-fill: #333333;                                         -fx-font-family: 'Segoe UI';                                         -fx-font-size: 12px;                                         -fx-background-radius: 8;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                                 " text="Del Flashcard" />
-                    </children>
-                </HBox>
-                <Button fx:id="shuffleFlashcardsButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" style="                                         -fx-background-color: #cfc9bf;                                         -fx-text-fill: #333333;                                         -fx-font-family: 'Segoe UI';                                         -fx-font-size: 12px;                                         -fx-background-radius: 8;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 2);                                 " text="Shuffle Flashcards" />
-            </children></VBox>
+                <Button fx:id="shuffleFlashcardsButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" style="
+                  -fx-background-color: linear-gradient(to bottom, #cfc9bf, #bfb5ac);
+                  -fx-text-fill: #333333;
+                  -fx-font-family: 'Segoe UI';
+                  -fx-font-size: 12px;
+                  -fx-background-radius: 8;
+                  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
+                "
+                        text="Shuffle Flashcards" />            </children></VBox>
     </left>
 </BorderPane>

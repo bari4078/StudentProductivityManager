@@ -15,21 +15,22 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, -2);
 }
 
+/* Modern large buttons */
 .big-button {
     -fx-font-size: 16px;
     -fx-font-weight: 600;
     -fx-font-family: "Segoe UI";
     -fx-text-fill: #2e2e2e;
 
-
+    /* a soft golden‑grey gradient from your theme */
     -fx-background-color: linear-gradient(
             to bottom,
-            #ded9d1,
-            #cfc9bf
+            #ded9d1,    /* top – warm neutral */
+            #cfc9bf     /* bottom – slightly deeper taupe */
     );
     -fx-background-radius: 12;
     -fx-border-radius: 12;
-    -fx-border-color: #cfc9bf;
+    -fx-border-color: #cfc9bf;   /* ties into the darker end of the gradient */
     -fx-border-width: 1;
 
     -fx-pref-width: 180px;
@@ -37,21 +38,21 @@
 
     -fx-effect: dropshadow(
             gaussian,
-            rgba(0,0,0,0.08),
-            6,
-            0.3,
-            0,
-            2
+            rgba(0,0,0,0.08),   /* very subtle shadow */
+            6,                  /* radius */
+            0.3,                /* spread */
+            0,                  /* offsetX */
+            2                   /* offsetY */
     );
     -fx-cursor: hand;
 }
 
 .big-button:hover {
-
+    /* introduce a touch of your accent hues on hover */
     -fx-background-color: linear-gradient(
             to bottom,
-            #e8f4ff,
-            #ffe8e8
+            #e8f4ff,    /* a whisper of pale blue */
+            #ffe8e8     /* blending into a blush pink */
     );
     -fx-text-fill: #2e2e2e;
     -fx-effect: dropshadow(
@@ -63,6 +64,5 @@
             3
     );
 }
-
 
 
