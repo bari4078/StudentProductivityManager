@@ -1,0 +1,68 @@
+/* Background image (optional) */
+#rootPane {
+    -fx-background-image: url("../images/homeBackground.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Nav bar style */
+.nav-bar {
+    -fx-padding: 20px;
+    -fx-background-color: rgba(255, 255, 255, 0.25); /* semi-transparent */
+    -fx-border-color: rgba(0, 0, 0, 0.1);
+    -fx-border-width: 1 0 0 0;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, -2);
+}
+
+.big-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #2e2e2e;
+
+
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #ded9d1,
+            #cfc9bf
+    );
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #cfc9bf;
+    -fx-border-width: 1;
+
+    -fx-pref-width: 180px;
+    -fx-pref-height: 50px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            6,
+            0.3,
+            0,
+            2
+    );
+    -fx-cursor: hand;
+}
+
+.big-button:hover {
+
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #e8f4ff,
+            #ffe8e8
+    );
+    -fx-text-fill: #2e2e2e;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            8,
+            0.2,
+            0,
+            3
+    );
+}
+
+
+
