@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HomePageController {
-    @FXML private Button todoButton, flashcardButton;
+    @FXML private Button todoButton, flashcardButton,timerButton;
 
     @FXML
     private void goToTodo(ActionEvent event) throws IOException {
@@ -42,4 +42,18 @@ public class HomePageController {
         stage.show();
     }
 
+    @FXML
+    private void goToTimer(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(
+                getClass().getResource("/com/example/myapp/fxml/timer.fxml")
+        );
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(
+                getClass().getResource("/com/example/myapp/css/timer.css").toExternalForm()
+        );
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Pomodoro Timer");
+        stage.show();
+    }
 }

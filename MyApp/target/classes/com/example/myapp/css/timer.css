@@ -1,0 +1,89 @@
+#rootPane {
+    -fx-background-image: url("../images/timerBackground.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+
+#rootPane {
+    -fx-background-color:
+            url("../images/timerBackground.jpg")
+
+            linear-gradient(
+                    to bottom,
+                    rgba(222, 217, 209, 0.6),
+                    rgba(207, 201, 191, 0.6)
+            );
+    -fx-background-size: cover, cover;
+    -fx-background-position: center, center;
+    -fx-background-repeat: no-repeat, no-repeat;
+}
+.button {
+    -fx-background-color: transparent;
+    -fx-border-width: 2;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 2);
+
+    /* smooth transition on hover */
+    -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease,
+    -fx-border-color 0.2s ease;
+    -fx-border-color: #e0dad0;
+    -fx-text-fill: #f4f0e0;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #e0dad0,
+            #cfc9bf
+    );
+    -fx-text-fill: #2e2e2e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.3, 0, 3);
+}
+
+/* Mode toggle buttons */
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 2;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 2);
+
+    -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease,
+    -fx-border-color 0.2s ease;
+    -fx-border-color: #cfc9bf;
+    -fx-text-fill: #f4f0e0;
+}
+
+.toggle-button:selected, .toggle-button:hover:selected {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #cfc9bf,
+            #bfb5ac
+    );
+    -fx-text-fill: #2e2e2e;
+    -fx-border-color: #bfb5ac;
+}
+
+/* Large timer label */
+.timer-label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-color: #f4f0e0;
+    -fx-font-size: 80px;
+    -fx-text-fill: #f4f0e0;
+    -fx-font-weight: 800;
+}

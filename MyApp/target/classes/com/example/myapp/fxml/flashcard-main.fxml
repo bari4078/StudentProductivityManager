@@ -41,12 +41,19 @@
             </HBox>
                 <TreeView fx:id="sidebarTreeView" prefHeight="200.0" prefWidth="200.0"
                           style="
-                               -fx-background-color: transparent;
-                               -fx-font-family: 'Segoe UI';
-                               -fx-font-size: 12px;
-                               -fx-font-weight: bold;
-                               -fx-text-fill: #333333;
-                               -fx-cell-hover-color: transparent;"
+                    -fx-background-color: transparent;
+                    -fx-control-inner-background: linear-gradient(to bottom, #f0eee7, #ded9d1);
+                    -fx-background-insets: 0;
+                    -fx-padding: 8;
+                    -fx-font-family: 'Segoe UI';
+                    -fx-font-size: 12px;
+                    -fx-font-weight: bold;
+                    -fx-text-fill: #2e2e2e;
+                    -fx-border-radius: 12;
+                    -fx-background-radius: 12;
+                    -fx-border-color: #cfc9bf;
+                    -fx-border-width: 2;
+                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
                 />
                 <HBox fx:id="bottombox" prefHeight="40.0" prefWidth="200.0">
                     <children>
