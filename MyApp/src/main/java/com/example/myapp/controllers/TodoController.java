@@ -136,6 +136,8 @@ public class TodoController {
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
+
+        //ei line na korle, css style ashbe na
         scene.getStylesheets().add(getClass().getResource("/com/example/myapp/css/homepage.css").toExternalForm());
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

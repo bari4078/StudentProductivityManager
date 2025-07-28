@@ -5,64 +5,44 @@
     -fx-background-position: center center;
 }
 
-/* Nav bar style */
 .nav-bar {
     -fx-padding: 20px;
-    -fx-background-color: rgba(255, 255, 255, 0.25); /* semi-transparent */
-    -fx-border-color: rgba(0, 0, 0, 0.1);
-    -fx-border-width: 1 0 0 0;
-    -fx-background-insets: 0;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, -2);
+    -fx-background-color: transparent;  /* NO frosted white any more */
+    -fx-border-width: 0;                /* remove top border too */
+    -fx-effect: none;                   /* or a very subtle shadow if you like */
 }
 
 /* Modern large buttons */
 .big-button {
-    -fx-font-size: 16px;
-    -fx-font-weight: 600;
-    -fx-font-family: "Segoe UI";
-    -fx-text-fill: #2e2e2e;
-
-    /* a soft golden‑grey gradient from your theme */
-    -fx-background-color: linear-gradient(
-            to bottom,
-            #ded9d1,    /* top – warm neutral */
-            #cfc9bf     /* bottom – slightly deeper taupe */
-    );
-    -fx-background-radius: 12;
-    -fx-border-radius: 12;
-    -fx-border-color: #cfc9bf;   /* ties into the darker end of the gradient */
-    -fx-border-width: 1;
+    -fx-background-color: transparent;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #e0dad0;       /* solid “gold” border */
+    -fx-border-width: 4;
 
     -fx-pref-width: 180px;
     -fx-pref-height: 50px;
 
-    -fx-effect: dropshadow(
-            gaussian,
-            rgba(0,0,0,0.08),   /* very subtle shadow */
-            6,                  /* radius */
-            0.3,                /* spread */
-            0,                  /* offsetX */
-            2                   /* offsetY */
-    );
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #e0dad0;
+    -fx-font-weight: 800;/* gold text */
+
     -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.2, 0, 2);
+    -fx-transition: background-color 0.3s ease, text-fill 0.3s ease;
 }
 
 .big-button:hover {
-    /* introduce a touch of your accent hues on hover */
+    /* fill with the soft neutral gradient you already liked */
+    -fx-border-width: 4;
+    -fx-font-weight: 800;
     -fx-background-color: linear-gradient(
             to bottom,
-            #e8f4ff,    /* a whisper of pale blue */
-            #ffe8e8     /* blending into a blush pink */
+            #ded9d1,    /* warm neutral top */
+            #cfc9bf     /* deeper taupe bottom */
     );
-    -fx-text-fill: #2e2e2e;
-    -fx-effect: dropshadow(
-            gaussian,
-            rgba(0,0,0,0.12),
-            8,
-            0.2,
-            0,
-            3
-    );
+    -fx-text-fill: #2e2e2e;         /* dark text for contrast */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.3, 0, 3);
 }
-
-
