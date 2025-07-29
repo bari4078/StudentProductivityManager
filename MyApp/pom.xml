@@ -12,7 +12,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.2</junit.version>
+        <java.version>17</java.version>
+        <okhttp.version>4.11.0</okhttp.version>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -53,6 +56,11 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
             <version>24.0.1</version>    <!-- match your other JavaFX versions -->
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.11.0</version>
         </dependency>
     </dependencies>
 

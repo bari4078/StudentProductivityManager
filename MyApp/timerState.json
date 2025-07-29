@@ -1,6 +1,6 @@
 {
-  "totalSeconds" : 1500,
-  "initialSeconds" : 1500,
-  "mode" : "pomodoro",
+  "totalSeconds" : 300,
+  "initialSeconds" : 300,
+  "mode" : "short",
   "running" : false
 }

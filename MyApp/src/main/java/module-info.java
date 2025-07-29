@@ -3,6 +3,8 @@ module com.example.myapp {
     requires javafx.fxml;
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.databind;
+    requires java.desktop;
+    requires jdk.httpserver;
 
 
     opens com.example.myapp to javafx.fxml;

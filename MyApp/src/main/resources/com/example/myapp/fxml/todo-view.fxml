@@ -5,39 +5,30 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800" spacing="20" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myapp.controllers.TodoController">
-    <Text style="-fx-font-size: 24; -fx-font-weight: bold;" text="TO DO LIST" />
-
-    <!-- Main Layout with Left (Input) and Right (Task List) -->
-    <HBox alignment="CENTER" spacing="20">
-        <!-- Left Box (Task Input Form) -->
-        <VBox alignment="CENTER" spacing="10">
-            <TextField fx:id="taskField" promptText="Enter Task" style="-fx-font-size: 16; -fx-pref-width: 250; -fx-border-color: gray; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 10;" />
-            <DatePicker fx:id="datePicker" promptText="Select Deadline" style="-fx-font-size: 16; -fx-pref-width: 250; -fx-padding: 10;" />
-
-            <!-- Time Selection (Spinner for Hours and Minutes) -->
-            <HBox alignment="CENTER" spacing="10">
-                <Text style="-fx-font-size: 16;" text="Select Time" />
-                <Spinner fx:id="hourSpinner" style="-fx-font-size: 16; -fx-pref-width: 80;" />
-                <Text style="-fx-font-size: 16;" text=":" />
-                <Spinner fx:id="minuteSpinner" style="-fx-font-size: 16; -fx-pref-width: 80;" />
-            </HBox>
-
-            <Button fx:id="addButton" onAction="#addTask" style="-fx-font-size: 16; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 25; -fx-padding: 10; -fx-font-weight: bold;" text="Add Task" />
-        </VBox>
-
-        <!-- Right Box (Task List) with Yellow Border -->
-        <VBox alignment="CENTER" spacing="10">
-            <Text style="-fx-font-size: 20; -fx-font-weight: bold;" text="Task List" />
-            <!-- Add yellow border across the task list -->
-            <ListView fx:id="taskList" style="-fx-font-size: 16; -fx-pref-width: 300; -fx-pref-height: 300;                                            -fx-border-color: yellow; -fx-border-width: 2; -fx-border-radius: 10;" />
-        </VBox>
-    </HBox>
-
-    <!-- Back Button (Bottom-left corner) -->
-    <Button fx:id="backButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#goToHomePage" prefHeight="10.0" prefWidth="63.0" style="-fx-font-size: 16; -fx-background-color: #FF6347; -fx-text-fill: white; -fx-border-radius: 25; -fx-padding: 10; -fx-font-weight: bold; -fx-alignment: bottom-left; -fx-pref-width: 100; -fx-pref-height: 40;" text="Back" translateX="-340.0" translateY="10.0" />
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myapp.controllers.TodoController">
+   <ImageView fitHeight="600.0" fitWidth="1000.0" layoutX="-74.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@back.png" />
+   </ImageView>
+   <ListView fx:id="taskList" layoutX="446.0" layoutY="181.0" style="-fx-font-size: 16; -fx-pref-width: 300; -fx-pref-height: 300;                                            -fx-border-color: yellow; -fx-border-width: 2; -fx-border-radius: 10;" />
+   <Text layoutX="556.0" layoutY="164.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Task List" />
+   <DatePicker fx:id="datePicker" layoutX="60.0" layoutY="181.0" promptText="Select Deadline" style="-fx-font-size: 16; -fx-pref-width: 250; -fx-padding: 10;" />
+   <TextField fx:id="taskField" layoutX="60.0" layoutY="118.0" promptText="Enter Task" style="-fx-font-size: 16; -fx-pref-width: 250; -fx-border-color: gray; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 10;" />
+   <Spinner fx:id="minutespinner" layoutX="270.0" layoutY="274.0" style="-fx-font-size: 16; -fx-pref-width: 80;" />
+   <Spinner fx:id="hourSpinner" layoutX="162.0" layoutY="273.0" style="-fx-font-size: 16; -fx-pref-width: 80;" />
+   <Text layoutX="256.0" layoutY="297.0" style="-fx-font-size: 16;" text=":" wrappingWidth="13.868770599365234" />
+   <Text layoutX="10.0" layoutY="10.0" style="-fx-font-size: 16;" text=":" />
+   <Button layoutX="10.0" layoutY="269.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="131.0" styleClass="stone-button" stylesheets="@style3.css" text="Select Time:">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+   <Text layoutX="317.0" layoutY="89.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="TO DO LIST" />
+   <Button fx:id="backButton" layoutX="685.0" layoutY="542.0" mnemonicParsing="false" onAction="#goTosearchtodo" prefHeight="40.0" prefWidth="90.0" styleClass="stone-button" stylesheets="@style3.css" text="back" />
+   <Button fx:id="addButton" layoutX="180.0" layoutY="345.0" mnemonicParsing="false" onAction="#addTask" prefHeight="46.0" prefWidth="90.0" styleClass="wooden-button" stylesheets="@style2.css" text="Add" />
+</AnchorPane>

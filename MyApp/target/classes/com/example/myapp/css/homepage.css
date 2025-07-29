@@ -1,4 +1,3 @@
-/* Background image (optional) */
 #rootPane {
     -fx-background-image: url("../images/homeBackground.jpg");
     -fx-background-size: cover;
@@ -7,17 +6,17 @@
 
 .nav-bar {
     -fx-padding: 20px;
-    -fx-background-color: transparent;  /* NO frosted white any more */
-    -fx-border-width: 0;                /* remove top border too */
-    -fx-effect: none;                   /* or a very subtle shadow if you like */
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: none;
 }
 
-/* Modern large buttons */
+
 .big-button {
     -fx-background-color: transparent;
     -fx-background-radius: 25;
     -fx-border-radius: 25;
-    -fx-border-color: #e0dad0;       /* solid “gold” border */
+    -fx-border-color: #e0dad0;
     -fx-border-width: 4;
 
     -fx-pref-width: 180px;
@@ -27,7 +26,7 @@
     -fx-font-weight: 600;
     -fx-font-family: "Segoe UI";
     -fx-text-fill: #e0dad0;
-    -fx-font-weight: 800;/* gold text */
+    -fx-font-weight: 800;
 
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.2, 0, 2);
@@ -35,14 +34,95 @@
 }
 
 .big-button:hover {
-    /* fill with the soft neutral gradient you already liked */
     -fx-border-width: 4;
     -fx-font-weight: 800;
     -fx-background-color: linear-gradient(
             to bottom,
-            #ded9d1,    /* warm neutral top */
-            #cfc9bf     /* deeper taupe bottom */
+            #ded9d1,
+            #cfc9bf
     );
     -fx-text-fill: #2e2e2e;         /* dark text for contrast */
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.3, 0, 3);
 }
+
+.search-bar {
+    -fx-padding: 10 0 10 0;
+}
+.search-field {
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #e0dad0;
+    -fx-border-width: 2;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI";
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+    -fx-cursor: text;
+}
+.go-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0dad0;
+    -fx-border-width: 2;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: 600;
+    -fx-text-fill: #e0dad0;
+    -fx-pref-width: 60px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+}
+.go-button:hover {
+    -fx-background-color: #e0dad0;
+    -fx-text-fill: #19100e;
+}
+
+.resources-box {
+    -fx-padding: 8;
+    -fx-background-color: rgba(255,255,255,0.6);
+    -fx-background-radius: 15;
+}
+.resources-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #19100e;
+}
+.resource-link {
+    -fx-text-fill: #19100e;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.resource-link:hover {
+    -fx-underline: true;
+    -fx-text-fill: #19100e;
+}
+
+/* ─── AI Tip Section ─── */
+.ai-box {
+    -fx-padding: 10;
+    -fx-background-color: rgba(255,255,255,0.6);
+    -fx-background-radius: 15;
+}
+.ai-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0dad0;
+    -fx-border-width: 2;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: 600;
+    -fx-text-fill: #19100e;
+    -fx-pref-width: 120px;
+    -fx-cursor: hand;
+}
+.ai-button:hover {
+    -fx-background-color: #e0dad0;
+    -fx-text-fill: #19100e;
+}
+.ai-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #19100e;
+    -fx-alignment: top-left;
+}
+
