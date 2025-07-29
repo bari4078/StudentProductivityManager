@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myapp.controllers.QuizController">
+   <children>
+      <ImageView fitHeight="600" fitWidth="800">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="38.0" layoutY="104.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" styleClass="wooden-button" stylesheets="@style2.css" text="Risk Scale">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Button layoutX="178.0" layoutY="104.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="121.0" styleClass="stone-button" stylesheets="@style3.css" text="Minimal">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="102.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="121.0" styleClass="stone-button" stylesheets="@style3.css" text="Moderate">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Button layoutX="467.0" layoutY="102.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="121.0" styleClass="stone-button" stylesheets="@style3.css" text="Severe">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Circle fill="DODGERBLUE" layoutX="527.0" layoutY="76.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="38.0" layoutY="209.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" styleClass="wooden-button" stylesheets="@style2.css" text="Self Intervention Tips">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Circle fill="DODGERBLUE" layoutX="61.0" layoutY="307.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="61.0" layoutY="360.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="61.0" layoutY="444.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="61.0" layoutY="499.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="100.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contacting with a Pyschiatrist is strongly recommended" wrappingWidth="569.3367309570312">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="100.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regularly include light physical activities like walks or yoga in your rountine" wrappingWidth="651.7367553710938">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="94.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a daily schedule to bring structure in your life" wrappingWidth="569.3367309570312">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="100.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Practice mindfulness and relaxation methods" wrappingWidth="569.3367309570312">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Circle fill="DODGERBLUE" layoutX="61.0" layoutY="552.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="100.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Say your prayer regularly" wrappingWidth="569.3367309570312">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="699.0" layoutY="530.0" mnemonicParsing="false" onAction="#gobacktohomepage" prefHeight="43.0" prefWidth="79.0" styleClass="stone-button" stylesheets="@style3.css" text="Back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

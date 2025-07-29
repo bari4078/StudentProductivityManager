@@ -1,0 +1,18 @@
+/* Define the wooden button style */
+.wooden-button {
+    -fx-background-color: linear-gradient(to bottom, #b97a3e, #c1844a); /* Gradient for wood color */
+    -fx-background-radius: 15px;   /* Rounded corners */
+    -fx-padding: 10px 20px;        /* Padding inside the button */
+    -fx-font-size: 14px;           /* Font size */
+    -fx-font-weight: bold;         /* Font weight */
+    -fx-text-fill: white;          /* Text color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.5, 0, 2); /* Shadow effect */
+    -fx-border-radius: 15px;      /* Border radius to match the button */
+    -fx-border-width: 0;          /* No border */
+    -fx-border-color: #8c5c2d;     /* Optional border color for the wooden effect */
+}
+
+.wooden-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #c1844a, #b97a3e); /* Reverse gradient on hover */
+    -fx-cursor: hand;             /* Change cursor to hand when hovering */
+}

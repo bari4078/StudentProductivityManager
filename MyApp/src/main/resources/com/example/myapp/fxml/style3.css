@@ -1,0 +1,18 @@
+/* Define the stone-like button style */
+.stone-button {
+    -fx-background-color: linear-gradient(to bottom, #A9B3B7, #5F6D73); /* Stone-like gradient */
+    -fx-background-radius: 15px;   /* Rounded corners */
+    -fx-padding: 10px 20px;        /* Padding inside the button */
+    -fx-font-size: 14px;           /* Font size */
+    -fx-font-weight: bold;         /* Font weight */
+    -fx-text-fill: white;          /* Text color */
+    -fx-border-radius: 15px;      /* Border radius to match the button */
+    -fx-border-width: 2px;        /* Thin border */
+    -fx-border-color: #4A5755;    /* Dark border color to enhance the stone effect */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.5, 0, 2); /* Shadow effect for depth */
+}
+
+.stone-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #5F6D73, #A9B3B7); /* Reverse gradient on hover */
+    -fx-cursor: hand;             /* Change cursor to hand when hovering */
+}

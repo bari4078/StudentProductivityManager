@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HomePageController {
     @FXML private Button todoButton, flashcardButton,timerButton;
@@ -54,6 +55,23 @@ public class HomePageController {
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Pomodoro Timer");
+        stage.show();
+    }
+
+    @FXML
+    private void goToQuiz(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(getClass().getResource("/com/example/myapp/fxml/hello-view.fxml"))
+        );
+
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(
+                getClass().getResource("/com/example/myapp/css/timer.css").toExternalForm()
+        );
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Mental Health Test");
         stage.show();
     }
 }

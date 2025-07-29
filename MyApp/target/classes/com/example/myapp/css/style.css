@@ -1,0 +1,16 @@
+/* Define the button style */
+.custom-button {
+    -fx-background-radius: 30px;   /* Rounded corners */
+    -fx-padding: 10px 20px;        /* Padding inside the button */
+    -fx-font-size: 14px;           /* Font size */
+    -fx-font-weight: bold;         /* Font weight */
+    -fx-text-fill: white;          /* Text color */
+    -fx-background-color: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    -fx-border-radius: 30px;      /* Border radius to match the button */
+    -fx-border-width: 0;          /* No border */
+}
+
+.custom-button:hover {
+    -fx-background-color: linear-gradient(to right, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    -fx-cursor: hand;             /* Change cursor to hand when hovering */
+}
