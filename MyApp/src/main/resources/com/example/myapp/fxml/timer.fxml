@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
 <BorderPane xmlns="http://javafx.com/javafx/24.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.myapp.controllers.TimerController"
@@ -15,7 +16,8 @@
             fx:id="rootPane">
 
     <top>
-        <VBox spacing="10">
+        <VBox spacing="10" alignment="TOP_CENTER">
+
             <HBox alignment="CENTER_LEFT">
                 <BorderPane.margin>
                     <Insets top="10" right="0" bottom="0" left="10"/>
@@ -44,8 +46,18 @@
                               styleClass="toggle-button"
                               prefWidth="150" prefHeight="40"/>
             </HBox>
+
+            <VBox spacing="10" alignment="CENTER">
+                <HBox alignment="CENTER">
+                    <ProgressBar fx:id="progressBar"
+                                 styleClass="progress-bar"
+                                 prefWidth="400"
+                                 progress="0"/>
+                </HBox>
+            </VBox>
         </VBox>
     </top>
+
 
 
 

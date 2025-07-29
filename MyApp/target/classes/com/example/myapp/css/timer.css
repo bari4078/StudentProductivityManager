@@ -81,9 +81,41 @@
 
 /* Large timer label */
 .timer-label {
+
+    -fx-text-fill: linear-gradient(
+            to right,
+            #f4f0e0 0%,
+            #ffffff 50%,
+            #f4f0e0 100%
+    );
     -fx-font-family: "Segoe UI";
-    -fx-font-color: #f4f0e0;
-    -fx-font-size: 80px;
-    -fx-text-fill: #f4f0e0;
+    -fx-font-size: 96px;
     -fx-font-weight: 800;
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0.5, 0, 4);
+
+    -fx-letter-spacing: 2px;
 }
+
+.progress-bar {
+
+    -fx-background-color: rgba(244, 240, 224, 0.2);
+    -fx-background-insets: 0;
+    -fx-background-radius: 8;
+    -fx-padding: 3px;
+    -fx-pref-height: 12px;
+
+    -fx-accent: linear-gradient(
+            to right,
+            #cfc9bf 0%,
+            #e0dad0 50%,
+            #cfc9bf 100%
+    );
+}
+
+.progress-bar > .bar {
+    -fx-background-insets: 0;
+    -fx-background-radius: 6;
+}
+
+
