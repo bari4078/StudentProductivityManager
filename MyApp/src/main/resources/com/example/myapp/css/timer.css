@@ -103,7 +103,7 @@
     -fx-background-insets: 0;
     -fx-background-radius: 8;
     -fx-padding: 3px;
-    -fx-pref-height: 12px;
+    -fx-pref-height: 20px;
 
     -fx-accent: linear-gradient(
             to right,

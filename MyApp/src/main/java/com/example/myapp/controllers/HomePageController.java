@@ -113,8 +113,8 @@ public class HomePageController {
     private void openUri(String url) {
         try {
             Desktop.getDesktop().browse(new URI(url));
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

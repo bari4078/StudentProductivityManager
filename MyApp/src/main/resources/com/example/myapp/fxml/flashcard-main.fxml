@@ -16,200 +16,26 @@
             <children>
             <HBox prefHeight="40.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="goToHomeButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0"  style="
-                      -fx-background-color: transparent;
-                        -fx-border-width: 2;
-                        -fx-background-radius: 16;
-                        -fx-border-radius: 16;
-
-                        -fx-font-family: 'Segoe UI';
-                        -fx-font-size: 12px;
-                        -fx-font-weight: bold;
-
-                        -fx-cursor: hand;
-                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                        /* smooth transition for hover */
-                        -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                        -fx-border-color: #cfc9bf;
-                        -fx-text-fill: #333333;
-                        -fx-background-color: linear-gradient(to bottom, #ded9d1, #cfc9bf);
-                        -fx-text-fill: #2e2e2e;
-                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);
-                    "
-                          text="&lt;-    Home" /></children>
+                  <Button fx:id="goToHomeButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="200.0" style="                       -fx-background-color: transparent;                         -fx-border-width: 2;                         -fx-background-radius: 16;                         -fx-border-radius: 16;                          -fx-font-family: 'Segoe UI';                         -fx-font-size: 12px;                         -fx-font-weight: bold;                          -fx-cursor: hand;                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                          /* smooth transition for hover */                         -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                         -fx-border-color: #cfc9bf;                         -fx-text-fill: #333333;                         -fx-background-color: linear-gradient(to bottom, #ded9d1, #cfc9bf);                         -fx-text-fill: #2e2e2e;                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);                     " text="&lt;-    Home" /></children>
             </HBox>
-                <TreeView fx:id="sidebarTreeView" prefHeight="200.0" prefWidth="200.0"
-                          style="
-                    -fx-background-color: transparent;
-                    -fx-control-inner-background: linear-gradient(to bottom, #f0eee7, #ded9d1);
-                    -fx-background-insets: 0;
-                    -fx-padding: 8;
-                    -fx-font-family: 'Segoe UI';
-                    -fx-font-size: 12px;
-                    -fx-font-weight: bold;
-                    -fx-text-fill: #2e2e2e;
-                    -fx-border-radius: 12;
-                    -fx-background-radius: 12;
-                    -fx-border-color: #cfc9bf;
-                    -fx-border-width: 2;
-                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                />
+                <TreeView fx:id="sidebarTreeView" prefHeight="349.0" prefWidth="213.0" style="                     -fx-background-color: transparent;                     -fx-control-inner-background: linear-gradient(to bottom, #f0eee7, #ded9d1);                     -fx-background-insets: 0;                     -fx-padding: 8;                     -fx-font-family: 'Segoe UI';                     -fx-font-size: 12px;                     -fx-font-weight: bold;                     -fx-text-fill: #2e2e2e;                     -fx-border-radius: 12;                     -fx-background-radius: 12;                     -fx-border-color: #cfc9bf;                     -fx-border-width: 2;                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" />
                 <HBox fx:id="bottombox" prefHeight="40.0" prefWidth="200.0">
                     <children>
-                        <Button fx:id="addTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
-                                    -fx-background-color: transparent;
-                                    -fx-border-width: 2;
-                                    -fx-background-radius: 16;
-                                    -fx-border-radius: 16;
-
-                                    -fx-font-family: 'Segoe UI';
-                                    -fx-font-size: 12px;
-                                    -fx-font-weight: bold;
-
-                                    -fx-cursor: hand;
-                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                    /* smooth transition for hover */
-                                    -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                    -fx-border-color: #c1e0ff;
-                                    -fx-text-fill: #333333;
-                                    -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);
-                                    -fx-text-fill: #2e2e2e;
-                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                text="Add Topic" />
-                        <Button fx:id="deleteTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
-                                -fx-background-color: transparent;
-                                -fx-border-width: 2;
-                                -fx-background-radius: 16;
-                                -fx-border-radius: 16;
-
-                                -fx-font-family: 'Segoe UI';
-                                -fx-font-size: 12px;
-                                -fx-font-weight: bold;
-
-                                -fx-cursor: hand;
-                                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                /* smooth transition for hover */
-                                -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                -fx-border-color: #ffcdcd;
-                                -fx-text-fill: #333333;
-                                -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);
-                                -fx-text-fill: #2e2e2e;
-                                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                text="Delete Topic" />                    </children>
+                        <Button fx:id="addTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                     -fx-background-color: transparent;                                     -fx-border-width: 2;                                     -fx-background-radius: 16;                                     -fx-border-radius: 16;                                      -fx-font-family: 'Segoe UI';                                     -fx-font-size: 12px;                                     -fx-font-weight: bold;                                      -fx-cursor: hand;                                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                      /* smooth transition for hover */                                     -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                     -fx-border-color: #c1e0ff;                                     -fx-text-fill: #333333;                                     -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);                                     -fx-text-fill: #2e2e2e;                                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Add Topic" />
+                        <Button fx:id="deleteTopicButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                 -fx-background-color: transparent;                                 -fx-border-width: 2;                                 -fx-background-radius: 16;                                 -fx-border-radius: 16;                                  -fx-font-family: 'Segoe UI';                                 -fx-font-size: 12px;                                 -fx-font-weight: bold;                                  -fx-cursor: hand;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                  /* smooth transition for hover */                                 -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                 -fx-border-color: #ffcdcd;                                 -fx-text-fill: #333333;                                 -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);                                 -fx-text-fill: #2e2e2e;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Delete Topic" />                    </children>
                 </HBox>
                 <HBox prefHeight="40.0" prefWidth="200.0">
                     <children>
-                        <Button fx:id="addSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
-                                    -fx-background-color: transparent;
-                                    -fx-border-width: 2;
-                                    -fx-background-radius: 16;
-                                    -fx-border-radius: 16;
-
-                                    -fx-font-family: 'Segoe UI';
-                                    -fx-font-size: 12px;
-                                    -fx-font-weight: bold;
-
-                                    -fx-cursor: hand;
-                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                    /* smooth transition for hover */
-                                    -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                    -fx-border-color: #c1e0ff;
-                                    -fx-text-fill: #333333;
-                                    -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);
-                                    -fx-text-fill: #2e2e2e;
-                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                text="Add Subject" />
-                        <Button fx:id="deleteSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
-                                -fx-background-color: transparent;
-                                -fx-border-width: 2;
-                                -fx-background-radius: 16;
-                                -fx-border-radius: 16;
-
-                                -fx-font-family: 'Segoe UI';
-                                -fx-font-size: 12px;
-                                -fx-font-weight: bold;
-
-                                -fx-cursor: hand;
-                                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                /* smooth transition for hover */
-                                -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                -fx-border-color: #ffcdcd;
-                                -fx-text-fill: #333333;
-                                -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);
-                                -fx-text-fill: #2e2e2e;
-                                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                text="Del Subject" />
+                        <Button fx:id="addSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                     -fx-background-color: transparent;                                     -fx-border-width: 2;                                     -fx-background-radius: 16;                                     -fx-border-radius: 16;                                      -fx-font-family: 'Segoe UI';                                     -fx-font-size: 12px;                                     -fx-font-weight: bold;                                      -fx-cursor: hand;                                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                      /* smooth transition for hover */                                     -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                     -fx-border-color: #c1e0ff;                                     -fx-text-fill: #333333;                                     -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);                                     -fx-text-fill: #2e2e2e;                                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Add Subject" />
+                        <Button fx:id="deleteSubjectButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                 -fx-background-color: transparent;                                 -fx-border-width: 2;                                 -fx-background-radius: 16;                                 -fx-border-radius: 16;                                  -fx-font-family: 'Segoe UI';                                 -fx-font-size: 12px;                                 -fx-font-weight: bold;                                  -fx-cursor: hand;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                  /* smooth transition for hover */                                 -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                 -fx-border-color: #ffcdcd;                                 -fx-text-fill: #333333;                                 -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);                                 -fx-text-fill: #2e2e2e;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Del Subject" />
                     </children>
                 </HBox>
                 <HBox prefHeight="40.0" prefWidth="200.0">
                     <children>
-                        <Button fx:id="addFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
-                                    -fx-background-color: transparent;
-                                    -fx-border-width: 2;
-                                    -fx-background-radius: 16;
-                                    -fx-border-radius: 16;
-
-                                    -fx-font-family: 'Segoe UI';
-                                    -fx-font-size: 12px;
-                                    -fx-font-weight: bold;
-
-                                    -fx-cursor: hand;
-                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                    /* smooth transition for hover */
-                                    -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                    -fx-border-color: #c1e0ff;
-                                    -fx-text-fill: #333333;
-                                    -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);
-                                    -fx-text-fill: #2e2e2e;
-                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                text="Add Flashcard" />
-                        <Button fx:id="deleteFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="
-                                -fx-background-color: transparent;
-                                -fx-border-width: 2;
-                                -fx-background-radius: 16;
-                                -fx-border-radius: 16;
-
-                                -fx-font-family: 'Segoe UI';
-                                -fx-font-size: 12px;
-                                -fx-font-weight: bold;
-
-                                -fx-cursor: hand;
-                                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                /* smooth transition for hover */
-                                -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                -fx-border-color: #ffcdcd;
-                                -fx-text-fill: #333333;
-                                -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);
-                                -fx-text-fill: #2e2e2e;
-                                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                text="Del Flashcard" />                    </children>
+                        <Button fx:id="addFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                     -fx-background-color: transparent;                                     -fx-border-width: 2;                                     -fx-background-radius: 16;                                     -fx-border-radius: 16;                                      -fx-font-family: 'Segoe UI';                                     -fx-font-size: 12px;                                     -fx-font-weight: bold;                                      -fx-cursor: hand;                                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                      /* smooth transition for hover */                                     -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                     -fx-border-color: #c1e0ff;                                     -fx-text-fill: #333333;                                     -fx-background-color: linear-gradient(to bottom, #e8f4ff, #c1e0ff);                                     -fx-text-fill: #2e2e2e;                                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Add Flashcard" />
+                        <Button fx:id="deleteFlashcardButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" style="                                 -fx-background-color: transparent;                                 -fx-border-width: 2;                                 -fx-background-radius: 16;                                 -fx-border-radius: 16;                                  -fx-font-family: 'Segoe UI';                                 -fx-font-size: 12px;                                 -fx-font-weight: bold;                                  -fx-cursor: hand;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                  /* smooth transition for hover */                                 -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                 -fx-border-color: #ffcdcd;                                 -fx-text-fill: #333333;                                 -fx-background-color: linear-gradient(to bottom, #ffe8e8, #ffcdcd);                                 -fx-text-fill: #2e2e2e;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Del Flashcard" />                    </children>
                 </HBox>
-                <Button fx:id="shuffleFlashcardsButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" style="
-                                        -fx-background-color: transparent;
-                                        -fx-border-width: 2;
-                                        -fx-background-radius: 16;
-                                        -fx-border-radius: 16;
-
-                                        -fx-font-family: 'Segoe UI';
-                                        -fx-font-size: 12px;
-                                        -fx-font-weight: bold;
-
-                                        -fx-cursor: hand;
-                                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);
-
-                                        /* smooth transition for hover */
-                                        -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;
-                                        -fx-background-color: linear-gradient(to bottom, #cfc9bf, #bfb5ac);
-                                        -fx-text-fill: #2e2e2e;
-                                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);"
-                                        text="Shuffle Flashcards" />
+                <Button fx:id="shuffleFlashcardsButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" style="                                         -fx-background-color: transparent;                                         -fx-border-width: 2;                                         -fx-background-radius: 16;                                         -fx-border-radius: 16;                                          -fx-font-family: 'Segoe UI';                                         -fx-font-size: 12px;                                         -fx-font-weight: bold;                                          -fx-cursor: hand;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.2, 0, 1);                                          /* smooth transition for hover */                                         -fx-transition: background-color 0.2s ease, -fx-text-fill 0.2s ease, -fx-border-color 0.2s ease;                                         -fx-background-color: linear-gradient(to bottom, #cfc9bf, #bfb5ac);                                         -fx-text-fill: #2e2e2e;                                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0.3, 0, 2);" text="Shuffle Flashcards" />
             </children></VBox>
     </left>
 </BorderPane>

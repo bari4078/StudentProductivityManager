@@ -1,9 +1,9 @@
 package com.example.myapp.controllers;
 
 import com.example.myapp.persistence.TaskSaver;
+import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -20,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -54,16 +55,16 @@ public class TodoController  {
 
     @FXML
     public void initialize() {
-        // Load tasks from the TaskSaver class
+
         List<String> loaded = TaskSaver.load();
         tasks = FXCollections.observableArrayList(loaded);
         taskList.setItems(tasks);
 
-        // Initialize the spinner value factories for hour and minute (24-hour format)
-        hourSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 23, 12)); // Corrected to 0-23 for 24-hour format
+
+        hourSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 23, 12));
         minutespinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 59, 0));
 
-        // Context menu for task operations
+
         contextMenu = new ContextMenu();
         MenuItem completedItem = new MenuItem("Mark as Completed");
         MenuItem deleteItem = new MenuItem("Delete Task");
@@ -84,16 +85,40 @@ public class TodoController  {
             }
         }
     }
-
-    private void markAsCompleted() {
+    private void AsCompleted() {
         String selectedTask = taskList.getSelectionModel().getSelectedItem();
         if (selectedTask != null) {
             tasks.remove(selectedTask);
             tasks.add(selectedTask + " - Completed");
+
+            // Apply bounce animation to the task label
+            ScaleTransition bounce = new ScaleTransition(Duration.seconds(0.5), taskList);
+            bounce.setFromX(1);
+            bounce.setFromY(1);
+            bounce.setToX(1.2);
+            bounce.setToY(1.2);
+            bounce.setCycleCount(2);
+            bounce.setAutoReverse(true);
+            bounce.play();
+
             taskList.setStyle("-fx-background-color: transparent;");
             saveTasks();
         }
     }
+
+    private void markAsCompleted() {
+        String selectedTask = taskList.getSelectionModel().getSelectedItem();
+        if (selectedTask != null) {
+
+       String restrictedTask = selectedTask.toUpperCase();
+
+            AsCompleted();
+            tasks.remove(selectedTask);
+
+            saveTasks();
+        }
+    }
+
 
     private void deleteTask() {
         String selectedTask = taskList.getSelectionModel().getSelectedItem();

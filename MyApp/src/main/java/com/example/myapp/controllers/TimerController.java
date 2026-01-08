@@ -30,6 +30,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+
 public class TimerController implements Initializable {
 
 
@@ -44,7 +49,7 @@ public class TimerController implements Initializable {
     @FXML private ProgressBar progressBar;
     private int initialSeconds;
     private ToggleGroup modeGroup;
-    private Timeline timeline;
+    private ScheduledExecutorService scheduler;
     private int totalSeconds;
     private boolean running = false;
 
@@ -63,28 +68,32 @@ public class TimerController implements Initializable {
                 this.initialSeconds = st.initialSeconds;
                 this.totalSeconds   = st.totalSeconds;
                 this.running        = st.running;
-                // re‑select toggle
+
                 switch (st.mode) {
-                    case "short" -> shortBreakBtn.setSelected(true);
-                    case "long"  -> longBreakBtn.setSelected(true);
-                    default      -> pomodoroBtn.setSelected(true);
+                    case "short": {
+                        shortBreakBtn.setSelected(true);
+                        break;
+                    }
+                    case "long"  : {
+                        longBreakBtn.setSelected(true);
+                        break;
+                    }
+                    default      : {
+                        pomodoroBtn.setSelected(true);
+                        break;
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-                // fallback to default
+
                 pomodoroBtn.setSelected(true);
                 setModeDuration(POMO_SECONDS);
             }
         } else {
-            // first run: set defaults
+
             pomodoroBtn.setSelected(true);
             setModeDuration(POMO_SECONDS);
         }
-
-        modeGroup = new ToggleGroup();
-        pomodoroBtn.setToggleGroup(modeGroup);
-        shortBreakBtn.setToggleGroup(modeGroup);
-        longBreakBtn.setToggleGroup(modeGroup);
 
         modeGroup = new ToggleGroup();
         pomodoroBtn.setToggleGroup(modeGroup);
@@ -98,8 +107,10 @@ public class TimerController implements Initializable {
         startButton.setOnAction(this::handleStartPause);
         resetButton.setOnAction(e -> {
             resetTimer();
-            saveState();                // ← NEW: persist after reset
+            saveState();
+            stopScheduler();
         });
+
         backButton.setOnAction(e -> {
             try { goToHome(e); }
             catch (IOException ex) { throw new RuntimeException(ex); }
@@ -136,9 +147,19 @@ public class TimerController implements Initializable {
         rootPane.sceneProperty().addListener((obs, oldScene, newScene) -> {
             if (newScene != null) {
                 Stage stage = (Stage) newScene.getWindow();
-                stage.setOnCloseRequest(evt -> saveState());
+                stage.setOnCloseRequest(evt -> {
+                    saveState();
+                    stopScheduler();
+                });
             }
         });
+
+
+        if (running) {
+            handleStartPause(null);
+        }
+
+
     }
     private void startShimmerOn(Node bar) {
         Timeline shimmer = new Timeline(
@@ -163,7 +184,7 @@ public class TimerController implements Initializable {
     }
     private void onModeSelected(int seconds, String modeKey) {
         currentMode = modeKey;
-        stopTimeline();
+        stopScheduler();
         setModeDuration(seconds);
         updateLabel();
         startButton.setText("Start");
@@ -181,27 +202,36 @@ public class TimerController implements Initializable {
     }
 
     private void handleStartPause(ActionEvent event) {
-        if (!running) {
-
-            if (timeline == null) {
-
-                timeline = new Timeline(new KeyFrame(
-                        Duration.seconds(1),
-                        ae -> tick()
-                ));
-                timeline.setCycleCount(Timeline.INDEFINITE);
-            }
-            timeline.play();
-            startButton.setText("Pause");
-            running = true;
-
+        if (running) {
+            pauseTimer();
         } else {
+            startTimer();
+        }
+    }
 
-            if (timeline != null) {
-                timeline.pause();
-            }
-            startButton.setText("Start");
-            running = false;
+    private void startTimer() {
+        if (scheduler == null || scheduler.isShutdown()) {
+            scheduler = Executors.newSingleThreadScheduledExecutor();
+            scheduler.scheduleAtFixedRate(() ->
+                            Platform.runLater(this::tick),
+                    1, 1, TimeUnit.SECONDS
+            );
+        }
+        startButton.setText("Pause");
+        running = true;
+    }
+
+    private void pauseTimer() {
+        stopScheduler();
+        startButton.setText("Start");
+        running = false;
+    }
+
+
+    private void stopScheduler() {
+        if (scheduler != null && !scheduler.isShutdown()) {
+            scheduler.shutdownNow();
+            scheduler = null;
         }
     }
 
@@ -212,21 +242,15 @@ public class TimerController implements Initializable {
         double progress = (double)(initialSeconds - totalSeconds) / initialSeconds;
         progressBar.setProgress(progress);
         if (totalSeconds <= 0) {
-            stopTimeline();
+            stopScheduler();
             onTimerFinished();
         }
     }
 
-    private void stopTimeline() {
-        if (timeline != null) {
-            timeline.stop();
-            timeline = null;
-        }
-    }
 
 
     private void resetTimer() {
-        stopTimeline();
+        stopScheduler();
         ToggleButton selected = (ToggleButton) modeGroup.getSelectedToggle();
         if (selected == pomodoroBtn)       setModeDuration(POMO_SECONDS);
         else if (selected == shortBreakBtn) setModeDuration(SHORT_BREAK_SECONDS);
