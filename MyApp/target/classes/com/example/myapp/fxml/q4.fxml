@@ -3,13 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <StackPane xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myapp.controllers.QuizController">
     <AnchorPane prefHeight="600.0" prefWidth="800.0">
         <children>
@@ -19,30 +19,31 @@
                 </image>
             </ImageView>
             <Button layoutX="314.0" layoutY="397.0" mnemonicParsing="false" onAction="#gotoNextQuiz" prefHeight="50.0" prefWidth="88.0" styleClass="stone-button" stylesheets="@style3.css" text="Next" />
-          <RadioButton fx:id="option1" layoutX="133.0" layoutY="214.0" text="Nearly every days">
-            <toggleGroup>
-               <ToggleGroup fx:id="group4" />
-            </toggleGroup>
-            <font>
-               <Font size="22.0" />
-            </font>
-         </RadioButton>
-          <RadioButton fx:id="option3" layoutX="133.0" layoutY="332.0" text="Not at all" toggleGroup="$group4">
-            <font>
-               <Font size="22.0" />
-            </font>
-         </RadioButton>
-          <RadioButton fx:id="option2" layoutX="133.0" layoutY="275.0" text="Several days" toggleGroup="$group4">
-            <font>
-               <Font size="22.0" />
-            </font>
-         </RadioButton>
-         <Button layoutX="9.0" layoutY="116.0" mnemonicParsing="false" styleClass="wooden-button" stylesheets="@style2.css" text="Question 4" />
-         <Text layoutX="133.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Did you feel bad about yourself, like you were a failure or that you let your family down?" wrappingWidth="635.99990234375">
-            <font>
-               <Font size="22.0" />
-            </font>
-         </Text>
+            <RadioButton fx:id="option1" layoutX="133.0" layoutY="214.0" text="Nearly every days">
+                <toggleGroup>
+                    <ToggleGroup fx:id="group4" />
+                </toggleGroup>
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </RadioButton>
+            <RadioButton fx:id="option3" layoutX="133.0" layoutY="332.0" text="Not at all" toggleGroup="$group4">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </RadioButton>
+            <RadioButton fx:id="option2" layoutX="133.0" layoutY="275.0" text="Several days" toggleGroup="$group4">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </RadioButton>
+            <Button layoutX="9.0" layoutY="116.0" mnemonicParsing="false" styleClass="wooden-button" stylesheets="@style2.css" text="Question 4" />
+            <Text layoutX="133.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Did you feel bad about yourself, like you were a failure or that you let your family down?" wrappingWidth="635.99990234375">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Text>
+            <Button fx:id="exitbutton4" layoutX="683.0" layoutY="543.0" mnemonicParsing="false" onAction="#gobacktohomepage" prefHeight="42.0" prefWidth="102.0" styleClass="custom-button" stylesheets="@style.css" text="Exit Test" />
         </children>
     </AnchorPane>
     <!--    <Button onAction="#goToNextQuestion" text="Next Question" translateY="100.0" />-->
